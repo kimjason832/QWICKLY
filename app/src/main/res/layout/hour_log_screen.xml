@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0F2BD"
+    tools:context=".signIn_screen">
+
+    <ImageView
+        android:id="@+id/signInScreen_whiteBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/white_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <TextView
+        android:id="@+id/signUpScreen_signUpText"
+        android:layout_width="199dp"
+        android:layout_height="58dp"
+        android:fontFamily="@font/inder"
+        android:text="Hour Log"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu_bar_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="643dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        app:srcCompat="@drawable/figma_white_clock_icon"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="668dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        app:srcCompat="@drawable/figma_white_qr_icon"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="668dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        app:srcCompat="@drawable/figma_green_doc_icon"
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="666dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        app:srcCompat="@drawable/figma_white_home_icon"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="666dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/artificial_intelligence_analyzes_data"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="302dp"
+        android:layout_height="115dp"
+        android:text="Date, Start Time, End Time, Total Hours"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

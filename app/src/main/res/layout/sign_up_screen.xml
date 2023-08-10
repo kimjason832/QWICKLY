@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUpScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0F2BD"
+    tools:context=".signIn_screen">
+
+    <ImageView
+        android:id="@+id/signUpScreen_whiteBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/white_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <TextView
+        android:id="@+id/signUpScreen_signUpText"
+        android:layout_width="131dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/inder"
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <EditText
+        android:id="@+id/signUpScreen_emailTextInput"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Email"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="393dp" />
+
+    <EditText
+        android:id="@+id/signUpScreen_nameTextInput"
+        android:layout_width="246dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Full Name"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="329dp" />
+
+    <EditText
+        android:id="@+id/signUpScreen_confirmPasswordTextInput"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Confirm Password"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <EditText
+        android:id="@+id/signUpScreen_passwordTextInput"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Password"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="457dp" />
+
+    <Button
+        android:id="@+id/signInScreen_signInButton"
+        android:layout_width="145dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#B0F2BD"
+        android:fontFamily="@font/inder"
+        android:text="Sign Up"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <Button
+        android:id="@+id/signUpScreen_signInButton"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Sign In"
+        android:textAlignment="textStart"
+        android:textColor="#76CC87"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="589dp" />
+
+    <TextView
+        android:id="@+id/signUpScreen_accountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inder"
+        android:text="Already have account?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <ImageView
+        android:id="@+id/signUpScreen_engineerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/female_engineer_icon"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

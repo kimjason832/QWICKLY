@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0F2BD"
+    tools:context=".start_screen">
+
+    <ImageView
+        android:id="@+id/startScreen_ulvLogo"
+        android:layout_width="301dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ulv_logo" />
+
+    <ImageView
+        android:id="@+id/startScreen_roboticsIcon"
+        android:layout_width="222dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startScreen_ulvLogo"
+        app:srcCompat="@drawable/robotics_icon" />
+
+    <TextView
+        android:id="@+id/startScreen_presentsText"
+        android:layout_width="73dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/inder"
+        android:text="presents"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startScreen_roboticsIcon" />
+
+    <TextView
+        android:id="@+id/startScreen_qwicklyText"
+        android:layout_width="189dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inder"
+        android:text="QWICKLY"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startScreen_presentsText" />
+
+    <Button
+        android:id="@+id/startScreen_signInButton"
+        android:layout_width="236dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#1FB03F"
+        android:fontFamily="@font/inder"
+        android:text="Sign In"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startScreen_qwicklyText" />
+
+    <Button
+        android:id="@+id/startScreen_signUpButton"
+        android:layout_width="236dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/inder"
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#1FB03F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startScreen_signInButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

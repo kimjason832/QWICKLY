@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signInScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0F2BD"
+    tools:context=".signIn_screen">
+
+    <ImageView
+        android:id="@+id/signInScreen_whiteBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/white_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <ImageView
+        android:id="@+id/signInScreen_graphIcon"
+        android:layout_width="207dp"
+        android:layout_height="172dp"
+        app:srcCompat="@drawable/graph_icon"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <ImageView
+        android:id="@+id/signInScreen_cloudIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cloud_icon"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <ImageView
+        android:id="@+id/signInScreen_carIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/car_icon"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <TextView
+        android:id="@+id/signUpScreen_signUpText"
+        android:layout_width="111dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/inder"
+        android:text="Sign In"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <EditText
+        android:id="@+id/signInScreen_passwordTextInput"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Password"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <EditText
+        android:id="@+id/signInScreen_emailTextInput"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Email"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="366dp" />
+
+    <Button
+        android:id="@+id/signInScreen_signInButton"
+        android:layout_width="145dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#B0F2BD"
+        android:fontFamily="@font/inder"
+        android:text="Sign In"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <Button
+        android:id="@+id/signUpScreen_signInButton"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Sign Up"
+        android:textAlignment="textStart"
+        android:textColor="#76CC87"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <TextView
+        android:id="@+id/signUpScreen_accountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inder"
+        android:text="Don't have account?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="514dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

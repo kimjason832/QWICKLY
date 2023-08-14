@@ -13,6 +13,18 @@
         android:theme="@style/Theme.QWICKLY"
         tools:targetApi="31">
         <activity
+            android:name=".hour_log_screen"
+            android:exported="false" />
+        <activity
+            android:name=".status_screen"
+            android:exported="false" />
+        <activity
+            android:name=".qr_code_screen"
+            android:exported="false" />
+        <activity
+            android:name=".menu_screen"
+            android:exported="false" />
+        <activity
             android:name=".sign_up_screen"
             android:exported="false"
             android:label="@string/title_activity_sign_up_screen"

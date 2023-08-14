@@ -13,6 +13,11 @@
         android:theme="@style/Theme.QWICKLY"
         tools:targetApi="31">
         <activity
+            android:name=".sign_up_screen"
+            android:exported="false"
+            android:label="@string/title_activity_sign_up_screen"
+            android:theme="@style/Theme.QWICKLY" />
+        <activity
             android:name=".signIn_screen"
             android:exported="false" />
         <activity

@@ -9,118 +9,147 @@
 
     <ImageView
         android:id="@+id/menuScreen_whiteBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/white_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="154dp" />
+        android:layout_width="411dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/white_background" />
 
     <TextView
         android:id="@+id/menuScreen_menuText"
         android:layout_width="199dp"
         android:layout_height="58dp"
+        android:layout_marginTop="252dp"
         android:fontFamily="@font/inder"
         android:text="QWICKLY"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="260dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/menuScreen_questionText"
         android:layout_width="299dp"
         android:layout_height="30dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/inder"
         android:text="What would you like to do?"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="326dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_menuText" />
 
     <ImageView
         android:id="@+id/menuScreen_coderIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/programming_icon"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="282dp"
+        android:layout_height="273dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/programming_icon" />
 
     <Button
         android:id="@+id/menuScreen_scanQRCodeButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="Scan QR Code"
         android:textColor="#000000"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="384dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_questionText" />
 
     <Button
         android:id="@+id/menuScreen_seeCurrentStatusButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="See Current Status"
         android:textColor="#000000"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="464dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_scanQRCodeButton" />
 
     <Button
         android:id="@+id/menuScreen_viewTotalHoursButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="View Total Hours"
         android:textColor="#000000"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="544dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_seeCurrentStatusButton" />
 
     <ImageView
         android:id="@+id/menuScreen_menuBlackBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/menu_bar_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="643dp" />
+        android:layout_width="411dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="644dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_bar_background" />
 
     <ImageButton
         android:id="@+id/menuScreen_homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_green_home_icon"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="666dp" />
+        app:layout_constraintStart_toStartOf="@+id/menuScreen_menuBlackBackground"
+        app:layout_constraintTop_toTopOf="@+id/menuScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_green_home_icon" />
 
     <ImageButton
         android:id="@+id/menuScreen_statusIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_clock_icon"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintEnd_toStartOf="@+id/menuScreen_hourLogIcon"
+        app:layout_constraintTop_toTopOf="@+id/menuScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_clock_icon" />
 
     <ImageButton
         android:id="@+id/menuScreen_QRCodeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_qr_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintStart_toEndOf="@+id/menuScreen_homeIcon"
+        app:layout_constraintTop_toTopOf="@+id/menuScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_qr_icon" />
 
     <ImageButton
         android:id="@+id/menuScreen_hourLogIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_doc_icon"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="666dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menuScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_doc_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

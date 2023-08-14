@@ -10,6 +10,7 @@ import android.widget.Button;
 public class start_screen extends AppCompatActivity {
 
     private Button startScreenTosignInScreen;
+    private Button startScreenTosignUpScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,7 @@ public class start_screen extends AppCompatActivity {
         setContentView(R.layout.start_screen);
 
         //changes screen from Start Screen to Sign In Screen
-        startScreenTosignInScreen = findViewById(R.id.startScreen_signInButton);
+        startScreenTosignInScreen = (Button) findViewById(R.id.startScreen_signInButton);
         startScreenTosignInScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,6 +27,15 @@ public class start_screen extends AppCompatActivity {
             }
         });
 
+        //changes screen from Start Screen to Sign Up Screen
+        startScreenTosignUpScreen = (Button) findViewById(R.id.startScreen_signUpButton);
+        startScreenTosignUpScreen.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(start_screen.this, sign_up_screen.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

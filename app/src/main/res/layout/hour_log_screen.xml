@@ -10,81 +10,103 @@
 
     <ImageView
         android:id="@+id/hourLogScreen_whiteBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/white_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="154dp" />
+        android:layout_width="411dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/white_background" />
 
     <TextView
         android:id="@+id/hourLogScreen_hourLogText"
         android:layout_width="199dp"
         android:layout_height="58dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/inder"
         android:text="Hour Log"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="229dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourLogScreen_brainIcon" />
 
     <ImageView
         android:id="@+id/hourLogScreen_menuBlackBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/menu_bar_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="643dp" />
+        android:layout_width="411dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="644dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_bar_background"/>
 
     <ImageButton
         android:id="@+id/hourLogScreen_statusIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_clock_icon"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintEnd_toStartOf="@+id/hourLogScreen_hourLogIcon"
+        app:layout_constraintTop_toTopOf="@+id/hourLogScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_clock_icon" />
 
     <ImageButton
         android:id="@+id/hourLogScreen_QRCodeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_qr_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintStart_toEndOf="@+id/hourLogScreen_homeIcon"
+        app:layout_constraintTop_toTopOf="@+id/hourLogScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_qr_icon" />
 
     <ImageButton
         android:id="@+id/hourLogScreen_hourLogIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="51dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_green_doc_icon"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="666dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hourLogScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_green_doc_icon" />
 
     <ImageButton
         android:id="@+id/hourLogScreen_homeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_home_icon"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="666dp" />
+        app:layout_constraintStart_toStartOf="@+id/hourLogScreen_menuBlackBackground"
+        app:layout_constraintTop_toTopOf="@+id/hourLogScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_home_icon" />
 
     <ImageView
         android:id="@+id/hourLogScreen_brainIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/artificial_intelligence_analyzes_data"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="244dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/artificial_intelligence_analyzes_data" />
 
     <TextView
         android:id="@+id/hourLogScreen_placeholderText"
         android:layout_width="302dp"
         android:layout_height="115dp"
+        android:layout_marginBottom="232dp"
         android:text="Date, Start Time, End Time, Total Hours"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="328dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/hourLogScreen_menuBlackBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

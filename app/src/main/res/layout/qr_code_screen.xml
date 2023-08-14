@@ -8,32 +8,6 @@
     android:background="#FFFFFF"
     tools:context=".signIn_screen">
 
-    <ImageView
-        android:id="@+id/qrCodeScreen_menuBlackBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/menu_bar_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="643dp" />
-
-    <ImageButton
-        android:id="@+id/qrCodeScreen_statusIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_clock_icon"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="668dp" />
-
-    <ImageButton
-        android:id="@+id/qrCodeScreen_hourLogIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_doc_icon"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="666dp" />
-
     <TextView
         android:id="@+id/qrCodeScreen_placeholderText"
         android:layout_width="274dp"
@@ -45,22 +19,60 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/qrCodeScreen_menuBlackBackground"
+        android:layout_width="411dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="644dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_bar_background" />
+
+
+    <ImageButton
+        android:id="@+id/qrCodeScreen_statusIcon"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/qrCodeScreen_hourLogIcon"
+        app:layout_constraintTop_toTopOf="@+id/qrCodeScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_clock_icon" />
+
+    <ImageButton
+        android:id="@+id/qrCodeScreen_hourLogIcon"
+        android:layout_width="51dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/qrCodeScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_doc_icon" />
+
     <ImageButton
         android:id="@+id/qrCodeScreen_QRCodeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_green_qr_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintStart_toEndOf="@+id/qrCodeScreen_homeIcon"
+        app:layout_constraintTop_toTopOf="@+id/qrCodeScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_green_qr_icon" />
 
     <ImageButton
         android:id="@+id/qrCodeScreen_homeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_home_icon"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="666dp" />
+        app:layout_constraintStart_toStartOf="@+id/qrCodeScreen_menuBlackBackground"
+        app:layout_constraintTop_toTopOf="@+id/qrCodeScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_home_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

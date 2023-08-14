@@ -10,137 +10,170 @@
 
     <ImageView
         android:id="@+id/statusScreen_whiteBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/white_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="154dp" />
+        android:layout_width="411dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/white_background" />
 
     <TextView
         android:id="@+id/statusScreen_statusText"
         android:layout_width="261dp"
         android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/inder"
         android:text="Your Status"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="239dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_botanistIcon" />
 
     <ImageView
         android:id="@+id/statusScreen_menuBlackBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/menu_bar_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="643dp" />
+        android:layout_width="411dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="644dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_bar_background" />
 
     <ImageButton
         android:id="@+id/statusScreen_QRCodeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_qr_icon"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintStart_toEndOf="@+id/statusScreen_homeIcon"
+        app:layout_constraintTop_toTopOf="@+id/statusScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_qr_icon" />
 
     <ImageButton
         android:id="@+id/statusScreen_hourLogIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="51dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_doc_icon"
-        tools:layout_editor_absoluteX="330dp"
-        tools:layout_editor_absoluteY="666dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/statusScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_doc_icon" />
+
+    <ImageButton
+        android:id="@+id/statusScreen_statusIcon"
+        android:layout_width="56dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/statusScreen_hourLogIcon"
+        app:layout_constraintTop_toTopOf="@+id/statusScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_green_clock_icon" />
+
+    <ImageButton
+        android:id="@+id/statusScreen_homeIcon"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/statusScreen_menuBlackBackground"
+        app:layout_constraintTop_toTopOf="@+id/statusScreen_menuBlackBackground"
+        app:srcCompat="@drawable/figma_white_home_icon" />
 
     <ImageView
         android:id="@+id/statusScreen_botanistIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/genetic_engineering"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="43dp" />
+        android:layout_width="187dp"
+        android:layout_height="187dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/genetic_engineering" />
 
     <ImageView
         android:id="@+id/statusScreen_timeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/clock_with_money_and_coins"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="7dp" />
+        android:layout_width="187dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/clock_with_money_and_coins" />
 
     <TextView
         android:id="@+id/statusScreen_dateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="12dp"
         android:text="Today's Date"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="317dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_statusText" />
 
     <EditText
         android:id="@+id/statusScreen_dateTextInput"
-        android:layout_width="247dp"
-        android:layout_height="44dp"
+        android:layout_width="249dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
         android:text="Date"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_dateText" />
 
     <EditText
         android:id="@+id/statusScreen_signedInTimeTextInput"
         android:layout_width="247dp"
-        android:layout_height="44dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="text"
         android:text="Signed In Time"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_timedSignedInText" />
 
     <EditText
         android:id="@+id/statusScreen_totalHoursTextInput"
-        android:layout_width="247dp"
-        android:layout_height="44dp"
+        android:layout_width="257dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="text"
         android:text="Current Total Hours"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="559dp" />
-
-    <TextView
-        android:id="@+id/statusScreen_timedSignedInText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Timed Signed In"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_totalHoursText" />
 
     <TextView
         android:id="@+id/statusScreen_totalHoursText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
         android:text="Total Hours"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="520dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_signedInTimeTextInput" />
 
-    <ImageButton
-        android:id="@+id/statusScreen_statusIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_green_clock_icon"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="668dp" />
-
-    <ImageButton
-        android:id="@+id/statusScreen_homeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
-        app:srcCompat="@drawable/figma_white_home_icon"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="666dp" />
+    <TextView
+        android:id="@+id/statusScreen_timedSignedInText"
+        android:layout_width="159dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:text="Timed Signed In"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusScreen_dateTextInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

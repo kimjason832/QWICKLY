@@ -11,7 +11,7 @@
         android:id="@+id/menuScreen_whiteBackground"
         android:layout_width="411dp"
         android:layout_height="700dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,8 +110,8 @@
 
     <ImageButton
         android:id="@+id/menuScreen_homeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="54dp"
+        android:layout_height="52dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
@@ -121,8 +121,8 @@
 
     <ImageButton
         android:id="@+id/menuScreen_statusIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#000000"
@@ -132,8 +132,8 @@
 
     <ImageButton
         android:id="@+id/menuScreen_QRCodeIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
@@ -143,8 +143,8 @@
 
     <ImageButton
         android:id="@+id/menuScreen_hourLogIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="51dp"
+        android:layout_height="55dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"

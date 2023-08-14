@@ -41,7 +41,7 @@
         tools:layout_editor_absoluteY="164dp" />
 
     <TextView
-        android:id="@+id/signUpScreen_signUpText"
+        android:id="@+id/signInScreen_signInText"
         android:layout_width="111dp"
         android:layout_height="47dp"
         android:fontFamily="@font/inder"
@@ -83,7 +83,7 @@
         tools:layout_editor_absoluteY="650dp" />
 
     <Button
-        android:id="@+id/signUpScreen_signInButton"
+        android:id="@+id/signInScreen_signUpButton"
         android:layout_width="105dp"
         android:layout_height="45dp"
         android:backgroundTint="#FFFFFF"
@@ -95,7 +95,7 @@
         tools:layout_editor_absoluteY="504dp" />
 
     <TextView
-        android:id="@+id/signUpScreen_accountText"
+        android:id="@+id/signInScreen_accountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inder"

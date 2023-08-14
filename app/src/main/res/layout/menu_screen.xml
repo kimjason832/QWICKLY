@@ -8,7 +8,7 @@
     tools:context=".signIn_screen">
 
     <ImageView
-        android:id="@+id/signInScreen_whiteBackground"
+        android:id="@+id/menuScreen_whiteBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/white_background"
@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="154dp" />
 
     <TextView
-        android:id="@+id/signUpScreen_signUpText"
+        android:id="@+id/menuScreen_menuText"
         android:layout_width="199dp"
         android:layout_height="58dp"
         android:fontFamily="@font/inder"
@@ -26,7 +26,7 @@
         tools:layout_editor_absoluteY="260dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/menuScreen_questionText"
         android:layout_width="299dp"
         android:layout_height="30dp"
         android:fontFamily="@font/inder"
@@ -36,7 +36,7 @@
         tools:layout_editor_absoluteY="326dp" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/menuScreen_coderIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/programming_icon"
@@ -44,7 +44,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/menuScreen_scanQRCodeButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
         android:backgroundTint="#9EF7B0"
@@ -56,7 +56,7 @@
         tools:layout_editor_absoluteY="384dp" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/menuScreen_seeCurrentStatusButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
         android:backgroundTint="#9EF7B0"
@@ -68,7 +68,7 @@
         tools:layout_editor_absoluteY="464dp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/menuScreen_viewTotalHoursButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
         android:backgroundTint="#9EF7B0"
@@ -80,7 +80,7 @@
         tools:layout_editor_absoluteY="544dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/menuScreen_menuBlackBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/menu_bar_background"
@@ -88,7 +88,7 @@
         tools:layout_editor_absoluteY="643dp" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/menuScreen_homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -97,7 +97,7 @@
         tools:layout_editor_absoluteY="666dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/menuScreen_statusIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -106,7 +106,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/menuScreen_QRCodeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -115,7 +115,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/menuScreen_hourLogIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"

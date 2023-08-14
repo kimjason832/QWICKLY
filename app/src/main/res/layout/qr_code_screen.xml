@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/qrCodeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".signIn_screen">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/qrCodeScreen_menuBlackBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/menu_bar_background"
@@ -16,7 +17,7 @@
         tools:layout_editor_absoluteY="643dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/qrCodeScreen_statusIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -25,7 +26,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/qrCodeScreen_hourLogIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -34,7 +35,7 @@
         tools:layout_editor_absoluteY="666dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/qrCodeScreen_placeholderText"
         android:layout_width="274dp"
         android:layout_height="82dp"
         android:layout_marginStart="88dp"
@@ -45,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/qrCodeScreen_QRCodeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -54,7 +55,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/qrCodeScreen_homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"

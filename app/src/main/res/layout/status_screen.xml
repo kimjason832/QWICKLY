@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/statusScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B0F2BD"
     tools:context=".signIn_screen">
 
     <ImageView
-        android:id="@+id/signInScreen_whiteBackground"
+        android:id="@+id/statusScreen_whiteBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/white_background"
@@ -16,7 +17,7 @@
         tools:layout_editor_absoluteY="154dp" />
 
     <TextView
-        android:id="@+id/signUpScreen_signUpText"
+        android:id="@+id/statusScreen_statusText"
         android:layout_width="261dp"
         android:layout_height="55dp"
         android:fontFamily="@font/inder"
@@ -26,7 +27,7 @@
         tools:layout_editor_absoluteY="239dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/statusScreen_menuBlackBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/menu_bar_background"
@@ -34,7 +35,7 @@
         tools:layout_editor_absoluteY="643dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/statusScreen_QRCodeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -43,7 +44,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/statusScreen_hourLogIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -52,7 +53,7 @@
         tools:layout_editor_absoluteY="666dp" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/statusScreen_botanistIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/genetic_engineering"
@@ -60,7 +61,7 @@
         tools:layout_editor_absoluteY="43dp" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/statusScreen_timeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/clock_with_money_and_coins"
@@ -68,7 +69,7 @@
         tools:layout_editor_absoluteY="7dp" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/statusScreen_dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Today's Date"
@@ -77,7 +78,7 @@
         tools:layout_editor_absoluteY="317dp" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/statusScreen_dateTextInput"
         android:layout_width="247dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -87,7 +88,7 @@
         tools:layout_editor_absoluteY="354dp" />
 
     <EditText
-        android:id="@+id/editTextText8"
+        android:id="@+id/statusScreen_signedInTimeTextInput"
         android:layout_width="247dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -97,7 +98,7 @@
         tools:layout_editor_absoluteY="454dp" />
 
     <EditText
-        android:id="@+id/editTextText12"
+        android:id="@+id/statusScreen_totalHoursTextInput"
         android:layout_width="247dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -107,7 +108,7 @@
         tools:layout_editor_absoluteY="559dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/statusScreen_timedSignedInText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Timed Signed In"
@@ -116,7 +117,7 @@
         tools:layout_editor_absoluteY="417dp" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/statusScreen_totalHoursText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Hours"
@@ -125,7 +126,7 @@
         tools:layout_editor_absoluteY="520dp" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/statusScreen_statusIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -134,7 +135,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/statusScreen_homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"

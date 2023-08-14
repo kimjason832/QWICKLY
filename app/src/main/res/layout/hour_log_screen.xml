@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hourLogScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B0F2BD"
     tools:context=".signIn_screen">
 
     <ImageView
-        android:id="@+id/signInScreen_whiteBackground"
+        android:id="@+id/hourLogScreen_whiteBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/white_background"
@@ -16,7 +17,7 @@
         tools:layout_editor_absoluteY="154dp" />
 
     <TextView
-        android:id="@+id/signUpScreen_signUpText"
+        android:id="@+id/hourLogScreen_hourLogText"
         android:layout_width="199dp"
         android:layout_height="58dp"
         android:fontFamily="@font/inder"
@@ -26,7 +27,7 @@
         tools:layout_editor_absoluteY="229dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/hourLogScreen_menuBlackBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/menu_bar_background"
@@ -34,7 +35,7 @@
         tools:layout_editor_absoluteY="643dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/hourLogScreen_statusIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -43,7 +44,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/hourLogScreen_QRCodeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -52,7 +53,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/hourLogScreen_hourLogIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -61,7 +62,7 @@
         tools:layout_editor_absoluteY="666dp" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/hourLogScreen_homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
@@ -70,7 +71,7 @@
         tools:layout_editor_absoluteY="666dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/hourLogScreen_brainIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/artificial_intelligence_analyzes_data"
@@ -78,7 +79,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/hourLogScreen_placeholderText"
         android:layout_width="302dp"
         android:layout_height="115dp"
         android:text="Date, Start Time, End Time, Total Hours"

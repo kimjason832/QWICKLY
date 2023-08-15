@@ -99,7 +99,7 @@
         android:id="@+id/signUpScreen_signInButton"
         android:layout_width="105dp"
         android:layout_height="45dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="52dp"
         android:backgroundTint="#FFFFFF"
         android:text="Sign In"
@@ -107,14 +107,14 @@
         android:textColor="#76CC87"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toEndOf="@+id/signUpScreen_accountText"
         app:layout_constraintTop_toBottomOf="@+id/signUpScreen_confirmPasswordTextInput" />
 
     <TextView
         android:id="@+id/signUpScreen_accountText"
-        android:layout_width="190dp"
-        android:layout_height="22dp"
+        android:layout_width="195dp"
+        android:layout_height="25dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/inder"

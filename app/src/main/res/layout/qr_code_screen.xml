@@ -23,11 +23,11 @@
         android:id="@+id/qrCodeScreen_menuBlackBackground"
         android:layout_width="411dp"
         android:layout_height="100dp"
-        android:layout_marginTop="644dp"
+        android:layout_marginBottom="-14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/menu_bar_background" />
 
 

@@ -27,7 +27,7 @@ public class signIn_screen extends AppCompatActivity {
             }
         });
 
-        //changes screen from Sign In Screen to Home Screen
+        //changes screen from Sign In Screen to Menu Screen
         signInButton = (Button) findViewById(R.id.signInScreen_signInButton);
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override

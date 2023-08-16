@@ -36,7 +36,7 @@
         android:layout_width="57dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#000000"
         app:layout_constraintEnd_toStartOf="@+id/qrCodeScreen_hourLogIcon"
         app:layout_constraintTop_toTopOf="@+id/qrCodeScreen_menuBlackBackground"
@@ -45,8 +45,8 @@
     <ImageButton
         android:id="@+id/qrCodeScreen_hourLogIcon"
         android:layout_width="51dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="23dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,9 +55,9 @@
 
     <ImageButton
         android:id="@+id/qrCodeScreen_QRCodeIcon"
-        android:layout_width="56dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="44dp"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#000000"
         app:layout_constraintStart_toEndOf="@+id/qrCodeScreen_homeIcon"

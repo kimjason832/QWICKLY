@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class menu_screen extends AppCompatActivity {
 
@@ -16,11 +20,42 @@ public class menu_screen extends AppCompatActivity {
     private ImageButton menuScreenToqrCodeScreen;
     private ImageButton menuScreenTostatusScreen;
     private ImageButton menuScreenToHoursScreen;
+    FirebaseAuth auth;
+    Button logoutButton;
+    TextView emailTextview;
+    FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_screen);
+
+        auth = FirebaseAuth.getInstance();
+        logoutButton = findViewById(R.id.menuScreen_logoutButton);
+        emailTextview = findViewById(R.id.menuScreen_accountEmail);
+        user = auth.getCurrentUser();
+
+        //checks account email and displays it
+        if (user == null){
+            Intent intent = new Intent(getApplicationContext(), signIn_screen.class);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            emailTextview.setText(user.getEmail());
+        }
+
+        //logout button to change user accounts
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), signIn_screen.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         //changes screen from Menu Screen to QR Code Screen
         scanQRCodeButton = (Button) findViewById(R.id.menuScreen_scanQRCodeButton);

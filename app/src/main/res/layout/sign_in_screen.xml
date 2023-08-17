@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B0F2BD"
+    android:orientation="vertical"
     tools:context=".signIn_screen">
 
     <ImageView
@@ -61,31 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInScreen_carIcon" />
 
-    <EditText
-        android:id="@+id/signInScreen_passwordTextInput"
-        android:layout_width="274dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInScreen_emailTextInput" />
-
-    <EditText
-        android:id="@+id/signInScreen_emailTextInput"
-        android:layout_width="272dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInScreen_signInText" />
-
     <Button
         android:id="@+id/signInScreen_signInButton"
         android:layout_width="145dp"
@@ -94,7 +70,7 @@
         android:layout_marginBottom="36dp"
         android:backgroundTint="#B0F2BD"
         android:fontFamily="@font/inder"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +80,8 @@
         android:id="@+id/signInScreen_signUpButton"
         android:layout_width="105dp"
         android:layout_height="40dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:backgroundTint="#FFFFFF"
         android:text="Sign Up"
@@ -112,20 +89,54 @@
         android:textColor="#76CC87"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toEndOf="@+id/signInScreen_accountText"
-        app:layout_constraintTop_toBottomOf="@+id/signInScreen_passwordTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email"
+        android:layout_width="315dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="104dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInScreen_signInText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password"
+        android:layout_width="315dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
         android:id="@+id/signInScreen_accountText"
         android:layout_width="182dp"
         android:layout_height="22dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/inder"
         android:text="Don't have account?"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInScreen_passwordTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="116dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInScreen_signInText" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

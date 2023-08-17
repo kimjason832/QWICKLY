@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B0F2BD"
+    android:orientation="vertical"
     tools:context=".signIn_screen">
 
     <ImageView
@@ -31,18 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/menuScreen_questionText"
-        android:layout_width="299dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/inder"
-        android:text="What would you like to do?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuScreen_menuText" />
-
     <ImageView
         android:id="@+id/menuScreen_coderIcon"
         android:layout_width="282dp"
@@ -57,7 +46,7 @@
         android:id="@+id/menuScreen_scanQRCodeButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="Scan QR Code"
@@ -66,13 +55,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuScreen_questionText" />
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_menuText" />
 
     <Button
         android:id="@+id/menuScreen_seeCurrentStatusButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="See Current Status"
@@ -87,7 +76,7 @@
         android:id="@+id/menuScreen_viewTotalHoursButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="View Total Hours"
@@ -97,6 +86,31 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuScreen_seeCurrentStatusButton" />
+
+    <TextView
+        android:id="@+id/menuScreen_accountEmail"
+        android:layout_width="255dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Student Email"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_menuText" />
+
+    <Button
+        android:id="@+id/menuScreen_logoutButton"
+        android:layout_width="100dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="-3dp"
+        android:backgroundTint="#9EF7B0"
+        android:text="@string/logout"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/menuScreen_accountEmail"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_menuText" />
 
     <ImageView
         android:id="@+id/menuScreen_menuBlackBackground"

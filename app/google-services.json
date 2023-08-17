@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "478565169635",
+    "project_id": "qwickly-8ffdb",
+    "storage_bucket": "qwickly-8ffdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478565169635:android:d7d82e06b5dcd601d0c8d6",
+        "android_client_info": {
+          "package_name": "com.example.qwickly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478565169635-3fkrfikru29jvks7rie3kg00s73s9ogl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNdBSEt3wmaEfVsQsiMxAW5oBNgeisgEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478565169635-3fkrfikru29jvks7rie3kg00s73s9ogl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

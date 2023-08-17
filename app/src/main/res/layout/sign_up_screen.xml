@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B0F2BD"
+    android:orientation="vertical"
     tools:context=".signIn_screen">
 
     <ImageView
@@ -31,56 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUpScreen_engineerIcon" />
 
-    <EditText
-        android:id="@+id/signUpScreen_emailTextInput"
-        android:layout_width="250dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_nameTextInput" />
-
-    <EditText
-        android:id="@+id/signUpScreen_nameTextInput"
-        android:layout_width="250dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Full Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_signUpText" />
-
-    <EditText
-        android:id="@+id/signUpScreen_confirmPasswordTextInput"
-        android:layout_width="245dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Confirm Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_passwordTextInput" />
-
-    <EditText
-        android:id="@+id/signUpScreen_passwordTextInput"
-        android:layout_width="249dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_emailTextInput" />
-
     <Button
         android:id="@+id/signUpScreen_signUpButton"
         android:layout_width="145dp"
@@ -99,6 +50,7 @@
         android:id="@+id/signUpScreen_signInButton"
         android:layout_width="105dp"
         android:layout_height="45dp"
+        android:layout_marginStart="-15dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="52dp"
         android:backgroundTint="#FFFFFF"
@@ -107,21 +59,21 @@
         android:textColor="#76CC87"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/signUpScreen_accountText"
-        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_confirmPasswordTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
         android:id="@+id/signUpScreen_accountText"
         android:layout_width="195dp"
         android:layout_height="25dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/inder"
         android:text="Already have account?"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_confirmPasswordTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageView
         android:id="@+id/signUpScreen_engineerIcon"
@@ -132,5 +84,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/female_engineer_icon" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email"
+        android:layout_width="315dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="108dp"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_signUpText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password"
+        android:layout_width="315dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_width="116dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpScreen_signUpText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,6 @@
 
     <size
         android:width="525dp"
-        android:height="700dp" />
+        android:height="750dp" />
 
 </shape>

@@ -52,11 +52,12 @@
 
     <TextView
         android:id="@+id/signInScreen_signInText"
-        android:layout_width="111dp"
-        android:layout_height="47dp"
+        android:layout_width="133dp"
+        android:layout_height="46dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/inder"
         android:text="Sign In"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +79,8 @@
 
     <Button
         android:id="@+id/signInScreen_signUpButton"
-        android:layout_width="105dp"
-        android:layout_height="40dp"
+        android:layout_width="119dp"
+        android:layout_height="42dp"
         android:layout_marginStart="-15dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
@@ -89,7 +90,7 @@
         android:textColor="#76CC87"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toEndOf="@+id/signInScreen_accountText"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
@@ -117,9 +118,9 @@
 
     <TextView
         android:id="@+id/signInScreen_accountText"
-        android:layout_width="182dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="60dp"
+        android:layout_width="205dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/inder"
         android:text="Don't have account?"

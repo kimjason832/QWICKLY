@@ -1,7 +1,10 @@
 package com.example.qwickly;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +14,8 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.journeyapps.barcodescanner.ScanContract;
+import com.journeyapps.barcodescanner.ScanOptions;
 
 public class menu_screen extends AppCompatActivity {
 
@@ -24,7 +29,6 @@ public class menu_screen extends AppCompatActivity {
     Button logoutButton;
     TextView emailTextview;
     FirebaseUser user;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +63,9 @@ public class menu_screen extends AppCompatActivity {
 
         //changes screen from Menu Screen to QR Code Screen
         scanQRCodeButton = (Button) findViewById(R.id.menuScreen_scanQRCodeButton);
-        scanQRCodeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(menu_screen.this, qr_code_screen.class);
-                startActivity(intent);
-            }
+        scanQRCodeButton.setOnClickListener(v->
+        {
+            scanCode();
         });
 
         //changes screen from Menu Screen to Status Screen
@@ -92,8 +93,8 @@ public class menu_screen extends AppCompatActivity {
         menuScreenToqrCodeScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu_screen.this, qr_code_screen.class);
-                startActivity(intent);
+                Intent intent = new Intent(menu_screen.this, status_screen.class);
+                scanCode();
             }
         });
 
@@ -118,4 +119,27 @@ public class menu_screen extends AppCompatActivity {
         });
 
     }
+
+    private void scanCode(){
+        ScanOptions options = new ScanOptions();
+        options.setPrompt("Volume up to flash on");
+        options.setOrientationLocked(true);
+        options.setCaptureActivity(CaptureAct.class);
+        barLauncher.launch(options);
+    }
+
+    ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result->
+    {
+        if (result.getContents() != null){
+            AlertDialog.Builder builder = new AlertDialog.Builder(menu_screen.this);
+            builder.setTitle("Result");
+            builder.setMessage(result.getContents());
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+                    dialog.dismiss();
+                }
+            }).show();
+        }
+    });
 }

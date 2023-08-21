@@ -22,11 +22,12 @@
 
     <TextView
         android:id="@+id/menuScreen_menuText"
-        android:layout_width="199dp"
-        android:layout_height="58dp"
+        android:layout_width="234dp"
+        android:layout_height="56dp"
         android:layout_marginTop="252dp"
         android:fontFamily="@font/inder"
         android:text="QWICKLY"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

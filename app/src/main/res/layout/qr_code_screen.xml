@@ -8,17 +8,6 @@
     android:background="#FFFFFF"
     tools:context=".signIn_screen">
 
-    <TextView
-        android:id="@+id/qrCodeScreen_placeholderText"
-        android:layout_width="274dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="208dp"
-        android:text="QR Code and Check mark Placed Here"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/qrCodeScreen_menuBlackBackground"
         android:layout_width="411dp"

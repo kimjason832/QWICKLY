@@ -42,11 +42,12 @@
 
     <TextView
         android:id="@+id/startScreen_qwicklyText"
-        android:layout_width="189dp"
-        android:layout_height="56dp"
+        android:layout_width="234dp"
+        android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/inder"
         android:text="QWICKLY"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -21,11 +21,12 @@
 
     <TextView
         android:id="@+id/hourLogScreen_hourLogText"
-        android:layout_width="199dp"
-        android:layout_height="58dp"
+        android:layout_width="245dp"
+        android:layout_height="59dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/inder"
         android:text="Hour Log"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,17 +97,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/artificial_intelligence_analyzes_data" />
-
-    <TextView
-        android:id="@+id/hourLogScreen_placeholderText"
-        android:layout_width="302dp"
-        android:layout_height="115dp"
-        android:layout_marginBottom="232dp"
-        android:text="Date, Start Time, End Time, Total Hours"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toBottomOf="@+id/hourLogScreen_menuBlackBackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

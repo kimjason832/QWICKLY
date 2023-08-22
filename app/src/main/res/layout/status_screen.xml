@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/statusScreen_statusText"
-        android:layout_width="261dp"
-        android:layout_height="55dp"
+        android:layout_width="299dp"
+        android:layout_height="56dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/inder"
@@ -108,10 +108,11 @@
 
     <TextView
         android:id="@+id/statusScreen_dateText"
-        android:layout_width="135dp"
-        android:layout_height="29dp"
+        android:layout_width="155dp"
+        android:layout_height="28dp"
         android:layout_marginTop="12dp"
         android:text="Today's Date"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +122,7 @@
         android:id="@+id/statusScreen_dateTextInput"
         android:layout_width="249dp"
         android:layout_height="54dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="text"
         android:text="Date"
@@ -156,10 +157,11 @@
 
     <TextView
         android:id="@+id/statusScreen_totalHoursText"
-        android:layout_width="115dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="165dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
         android:text="Total Hours"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,12 +169,14 @@
 
     <TextView
         android:id="@+id/statusScreen_timedSignedInText"
-        android:layout_width="159dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
         android:text="Timed Signed In"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusScreen_dateTextInput" />
 

@@ -93,7 +93,6 @@ public class menu_screen extends AppCompatActivity {
         menuScreenToqrCodeScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu_screen.this, status_screen.class);
                 scanCode();
             }
         });
@@ -130,7 +129,21 @@ public class menu_screen extends AppCompatActivity {
 
     ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result->
     {
-        if (result.getContents() != null){
+        if (result.getContents().equals("Wilson Makerspace Check-in Successful")){
+            AlertDialog.Builder builder = new AlertDialog.Builder(menu_screen.this);
+            builder.setTitle("Result");
+            builder.setMessage(result.getContents());
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+                    dialog.dismiss();
+                }
+            }).show();
+            Intent intent = new Intent(menu_screen.this, status_screen.class);
+            startActivity(intent);
+
+        }
+        else if (result.getContents().equals("Wilson Makerspace Check-out Successful")){
             AlertDialog.Builder builder = new AlertDialog.Builder(menu_screen.this);
             builder.setTitle("Result");
             builder.setMessage(result.getContents());

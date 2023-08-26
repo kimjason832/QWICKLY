@@ -145,7 +145,6 @@
         android:textColor="#5FEF7B"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusScreen_timedSignedInText" />
 

@@ -1,6 +1,12 @@
 package com.example.qwickly;
 
+import static com.example.qwickly.status_screen.setSignInTime;
+import static com.example.qwickly.status_screen.startTimer;
+import static com.example.qwickly.status_screen.stopTimer;
+
 import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -11,11 +17,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class menu_screen extends AppCompatActivity {
 
@@ -29,6 +51,9 @@ public class menu_screen extends AppCompatActivity {
     Button logoutButton;
     TextView emailTextview;
     FirebaseUser user;
+    FirebaseFirestore fStore;
+    String userID;
+    Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +61,13 @@ public class menu_screen extends AppCompatActivity {
         setContentView(R.layout.menu_screen);
 
         auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        userID = user.getUid();
+        fStore = FirebaseFirestore.getInstance();
         logoutButton = findViewById(R.id.menuScreen_logoutButton);
         emailTextview = findViewById(R.id.menuScreen_accountEmail);
-        user = auth.getCurrentUser();
+
+        calendar = Calendar.getInstance();
 
         //checks account email and displays it
         if (user == null){
@@ -139,9 +168,26 @@ public class menu_screen extends AppCompatActivity {
                     dialog.dismiss();
                 }
             }).show();
-            Intent intent = new Intent(menu_screen.this, status_screen.class);
-            startActivity(intent);
 
+            int hour = calendar.get(Calendar.HOUR_OF_DAY);
+            int minute = calendar.get(Calendar.MINUTE);
+            int second = calendar.get(Calendar.SECOND);
+            DocumentReference documentReference = fStore.collection("Users").document(userID);
+            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                   if (value.getLong("IsSignedIn") == 0){
+                        setSignInTime(hour, minute, second);
+//                        startTimer();
+
+                        Map<String, Object> userDetail = new HashMap<>();
+                        userDetail.put("IsSignedIn", 1);
+                        fStore.collection("Users")
+                                .document(userID)
+                                .update(userDetail);
+                    }
+                }
+            });
         }
         else if (result.getContents().equals("Wilson Makerspace Check-out Successful")){
             AlertDialog.Builder builder = new AlertDialog.Builder(menu_screen.this);
@@ -155,4 +201,6 @@ public class menu_screen extends AppCompatActivity {
             }).show();
         }
     });
+
+
 }

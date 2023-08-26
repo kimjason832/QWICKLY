@@ -179,7 +179,6 @@ public class menu_screen extends AppCompatActivity {
                    if (value.getLong("IsSignedIn") == 0){
                         setSignInTime(hour, minute, second);
 //                        startTimer();
-
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 1);
                         fStore.collection("Users")
@@ -199,6 +198,20 @@ public class menu_screen extends AppCompatActivity {
                     dialog.dismiss();
                 }
             }).show();
+            DocumentReference documentReference = fStore.collection("Users").document(userID);
+            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                    if (value.getLong("IsSignedIn") == 1){
+//                        startTimer();
+                        Map<String, Object> userDetail = new HashMap<>();
+                        userDetail.put("IsSignedIn", 0);
+                        fStore.collection("Users")
+                                .document(userID)
+                                .update(userDetail);
+                    }
+                }
+            });
         }
     });
 

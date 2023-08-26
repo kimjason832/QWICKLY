@@ -90,6 +90,7 @@ public class sign_up_screen extends AppCompatActivity {
                                     user.put("Email", email);
                                     user.put("Password", password);
                                     user.put("Hours", 0);
+                                    user.put("IsSignedIn", 0);
 //                                    fStore.collection("Users")
 //                                            .add(user);
                                     DocumentReference documentReference = fStore.collection("Users").document(userID);

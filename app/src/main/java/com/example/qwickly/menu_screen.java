@@ -1,8 +1,6 @@
 package com.example.qwickly;
 
 import static com.example.qwickly.status_screen.setSignInTime;
-import static com.example.qwickly.status_screen.startTimer;
-import static com.example.qwickly.status_screen.stopTimer;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;

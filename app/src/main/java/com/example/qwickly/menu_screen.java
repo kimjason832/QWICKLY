@@ -178,7 +178,6 @@ public class menu_screen extends AppCompatActivity {
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                    if (value.getLong("IsSignedIn") == 0){
                         setSignInTime(hour, minute, second);
-//                        startTimer();
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 1);
                         fStore.collection("Users")
@@ -187,6 +186,7 @@ public class menu_screen extends AppCompatActivity {
                     }
                 }
             });
+
         }
         else if (result.getContents().equals("Wilson Makerspace Check-out Successful")){
             AlertDialog.Builder builder = new AlertDialog.Builder(menu_screen.this);
@@ -203,7 +203,6 @@ public class menu_screen extends AppCompatActivity {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                     if (value.getLong("IsSignedIn") == 1){
-//                        startTimer();
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 0);
                         fStore.collection("Users")

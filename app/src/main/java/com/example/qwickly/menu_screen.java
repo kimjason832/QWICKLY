@@ -58,7 +58,7 @@ public class menu_screen extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     Calendar calendar;
-    public static long elapsedTime = 0L;
+    long elapsedTime = 0L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,7 +195,7 @@ public class menu_screen extends AppCompatActivity {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                    if (value.getLong("IsSignedIn") == 0){
-                       startTime = System.currentTimeMillis() - elapsedTime;
+                       startTime = System.currentTimeMillis();
                        handler.postDelayed(runnable, 0);
                         setSignInTime(hour, minute, second);
                         Map<String, Object> userDetail = new HashMap<>();
@@ -218,17 +218,22 @@ public class menu_screen extends AppCompatActivity {
                     dialog.dismiss();
                 }
             }).show();
-            handler.removeCallbacks(runnable);
-            elapsedTime = 0L;
-            updateTimerText(elapsedTime);
+
+
             DocumentReference documentReference = fStore.collection("Users").document(userID);
             documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                     if (value.getLong("IsSignedIn") == 1){
-
+                        setSignInTime(00, 00, 00);
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 0);
+                        long hours = elapsedTime / 1000 / 3600;
+                        long minutes = (elapsedTime / 1000 % 3600) / 60 / 60;
+                        long time = hours + minutes;
+                        userDetail.put("Hours", value.getLong("Hours") + elapsedTime);
+                        handler.removeCallbacks(runnable);
+                        updateTimerText(0L);
                         fStore.collection("Users")
                                 .document(userID)
                                 .update(userDetail);

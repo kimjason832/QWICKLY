@@ -42,7 +42,7 @@ public class status_screen extends AppCompatActivity {
         String currentDate = DateFormat.getDateInstance().format(calendar.getTime());
         date.setText(currentDate);
         start.setText(signInTimeDisplay);
-
+        
 
         //changes screen from Status Screen to Menu Screen
         statusScreenTohomeScreen = (ImageButton) findViewById(R.id.statusScreen_homeIcon);

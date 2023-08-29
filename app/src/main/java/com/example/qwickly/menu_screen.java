@@ -32,6 +32,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -219,7 +220,7 @@ public class menu_screen extends AppCompatActivity {
                 }
             }).show();
             long hours = elapsedTime / 1000 / 3600;
-            long minutes = (elapsedTime / 1000 % 3600) / 60 / 60;
+            int minutes = ((int) elapsedTime / 60000);
             long time = hours + minutes;
 
             DocumentReference documentReference = fStore.collection("Users").document(userID);
@@ -233,7 +234,8 @@ public class menu_screen extends AppCompatActivity {
                         updateTimerText(elapsedTime);
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 0);
-                        userDetail.put("Hours", (value.getLong("Hours") + minutes));
+                        userDetail.put("Hours", FieldValue.increment(minutes));
+//                        userDetail.put("Hours", (value.getLong("Hours") + (int) minutes));
                         fStore.collection("Users")
                                 .document(userID)
                                 .update(userDetail);

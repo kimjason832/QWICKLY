@@ -21,6 +21,9 @@ public class status_screen extends AppCompatActivity {
     TextView start;
     static TextView totalTime;
     static String signInTimeDisplay;
+    public static Handler handler;
+    public static Runnable runnable;
+    public static long startTime = 0L;
 
     public static void setSignInTime(int hour, int minute, int second){
         signInTimeDisplay = String.format("%02d:%02d:%02d", hour, minute, second);
@@ -39,6 +42,7 @@ public class status_screen extends AppCompatActivity {
         String currentDate = DateFormat.getDateInstance().format(calendar.getTime());
         date.setText(currentDate);
         start.setText(signInTimeDisplay);
+        
 
         //changes screen from Status Screen to Menu Screen
         statusScreenTohomeScreen = (ImageButton) findViewById(R.id.statusScreen_homeIcon);
@@ -69,6 +73,13 @@ public class status_screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public static void updateTimerText(long elapsedTime) {
+        long hours = elapsedTime / 1000 / 3600;
+        long minutes = (elapsedTime / 1000 % 3600) / 60;
+        long seconds = elapsedTime / 1000 % 60;
+        totalTime.setText(String.format("%02d:%02d:%02d", hours, minutes, seconds));
     }
 
 }

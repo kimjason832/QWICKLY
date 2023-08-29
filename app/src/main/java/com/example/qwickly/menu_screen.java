@@ -1,6 +1,11 @@
 package com.example.qwickly;
 
+import static com.example.qwickly.status_screen.handler;
 import static com.example.qwickly.status_screen.setSignInTime;
+import static com.example.qwickly.status_screen.runnable;
+import static com.example.qwickly.status_screen.startTime;
+//import static com.example.qwickly.status_screen.elapsedTime;
+import static com.example.qwickly.status_screen.updateTimerText;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
@@ -11,6 +16,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -52,6 +58,7 @@ public class menu_screen extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     Calendar calendar;
+    public static long elapsedTime = 0L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +71,16 @@ public class menu_screen extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         logoutButton = findViewById(R.id.menuScreen_logoutButton);
         emailTextview = findViewById(R.id.menuScreen_accountEmail);
+
+        handler = new Handler();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                elapsedTime = System.currentTimeMillis() - startTime;
+                updateTimerText(elapsedTime);
+                handler.postDelayed(this, 1000); // Update every second
+            }
+        };
 
         calendar = Calendar.getInstance();
 
@@ -141,8 +158,10 @@ public class menu_screen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(menu_screen.this, hour_log_screen.class);
                 startActivity(intent);
+
             }
         });
+
 
     }
 
@@ -170,11 +189,14 @@ public class menu_screen extends AppCompatActivity {
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
             int minute = calendar.get(Calendar.MINUTE);
             int second = calendar.get(Calendar.SECOND);
+
             DocumentReference documentReference = fStore.collection("Users").document(userID);
             documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                    if (value.getLong("IsSignedIn") == 0){
+                       startTime = System.currentTimeMillis() - elapsedTime;
+                       handler.postDelayed(runnable, 0);
                         setSignInTime(hour, minute, second);
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 1);
@@ -196,11 +218,15 @@ public class menu_screen extends AppCompatActivity {
                     dialog.dismiss();
                 }
             }).show();
+            handler.removeCallbacks(runnable);
+            elapsedTime = 0L;
+            updateTimerText(elapsedTime);
             DocumentReference documentReference = fStore.collection("Users").document(userID);
             documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                     if (value.getLong("IsSignedIn") == 1){
+
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 0);
                         fStore.collection("Users")

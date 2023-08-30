@@ -24,12 +24,13 @@
         android:id="@+id/menuScreen_menuText"
         android:layout_width="234dp"
         android:layout_height="56dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="240dp"
         android:fontFamily="@font/inder"
         android:text="QWICKLY"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,8 +38,8 @@
         android:id="@+id/menuScreen_coderIcon"
         android:layout_width="282dp"
         android:layout_height="273dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/programming_icon" />
@@ -47,7 +48,7 @@
         android:id="@+id/menuScreen_scanQRCodeButton"
         android:layout_width="278dp"
         android:layout_height="62dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="96dp"
         android:backgroundTint="#9EF7B0"
         android:fontFamily="@font/inder"
         android:text="Scan QR Code"
@@ -167,5 +168,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/menuScreen_menuBlackBackground"
         app:srcCompat="@drawable/figma_white_doc_icon" />
+
+    <TextView
+        android:id="@+id/menuScreen_timer"
+        android:layout_width="132dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="63dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuScreen_menuText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

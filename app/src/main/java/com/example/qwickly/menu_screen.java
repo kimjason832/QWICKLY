@@ -1,11 +1,12 @@
 package com.example.qwickly;
 
-import static com.example.qwickly.status_screen.handler;
+//import static com.example.qwickly.status_screen.handler;
 import static com.example.qwickly.status_screen.setSignInTime;
-import static com.example.qwickly.status_screen.runnable;
-import static com.example.qwickly.status_screen.startTime;
+//import static com.example.qwickly.status_screen.runnable;
+//import static com.example.qwickly.status_screen.startTime;
 //import static com.example.qwickly.status_screen.elapsedTime;
-import static com.example.qwickly.status_screen.updateTimerText;
+import static com.example.qwickly.status_screen.totalTime;
+//import static com.example.qwickly.status_screen.updateTimerText;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
@@ -55,10 +56,14 @@ public class menu_screen extends AppCompatActivity {
     FirebaseAuth auth;
     Button logoutButton;
     TextView emailTextview;
+    TextView timerTextview;
     FirebaseUser user;
     FirebaseFirestore fStore;
     String userID;
     Calendar calendar;
+    Handler handler;
+    Runnable runnable;
+    long startTime = 0L;
     long elapsedTime = 0L;
 
     @Override
@@ -72,6 +77,7 @@ public class menu_screen extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         logoutButton = findViewById(R.id.menuScreen_logoutButton);
         emailTextview = findViewById(R.id.menuScreen_accountEmail);
+        timerTextview = findViewById(R.id.menuScreen_timer);
 
         handler = new Handler();
         runnable = new Runnable() {
@@ -221,9 +227,9 @@ public class menu_screen extends AppCompatActivity {
             }).show();
             long hours = elapsedTime / 1000 / 3600;
             int minutes = ((int) elapsedTime / 60000);
-            long time = hours + minutes;
 
             DocumentReference documentReference = fStore.collection("Users").document(userID);
+            documentReference.update("Hours", FieldValue.increment(hours));
             documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -231,11 +237,8 @@ public class menu_screen extends AppCompatActivity {
                         setSignInTime(00, 00, 00);
                         handler.removeCallbacks(runnable);
                         elapsedTime = 0L;
-                        updateTimerText(elapsedTime);
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 0);
-                        userDetail.put("Hours", FieldValue.increment(minutes));
-//                        userDetail.put("Hours", (value.getLong("Hours") + (int) minutes));
                         fStore.collection("Users")
                                 .document(userID)
                                 .update(userDetail);
@@ -245,5 +248,11 @@ public class menu_screen extends AppCompatActivity {
         }
     });
 
+    public void updateTimerText(long elapsedTime) {
+        long hours = elapsedTime / 1000 / 3600;
+        long minutes = (elapsedTime / 1000 % 3600) / 60;
+        long seconds = elapsedTime / 1000 % 60;
+        timerTextview.setText(String.format("%02d:%02d:%02d", hours, minutes, seconds));
+    }
 
 }

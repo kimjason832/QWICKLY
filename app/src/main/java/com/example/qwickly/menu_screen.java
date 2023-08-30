@@ -237,6 +237,7 @@ public class menu_screen extends AppCompatActivity {
                         setSignInTime(00, 00, 00);
                         handler.removeCallbacks(runnable);
                         elapsedTime = 0L;
+                        updateTimerText(elapsedTime);
                         Map<String, Object> userDetail = new HashMap<>();
                         userDetail.put("IsSignedIn", 0);
                         fStore.collection("Users")

@@ -91,6 +91,22 @@ public class menu_screen extends AppCompatActivity {
 
         calendar = Calendar.getInstance();
 
+        //Resets hours if date of month is on the first or the sixteenth
+        DocumentReference documentReference = fStore.collection("Users").document(userID);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (calendar.get(Calendar.DAY_OF_MONTH) == 1 || calendar.get(Calendar.DAY_OF_MONTH) == 16){
+                    Map<String, Object> userDetail = new HashMap<>();
+                    userDetail.put("Hours", 0);
+                    fStore.collection("Users")
+                            .document(userID)
+                            .update(userDetail);
+                }
+            }
+        });
+
+
         //checks account email and displays it
         if (user == null){
             Intent intent = new Intent(getApplicationContext(), signIn_screen.class);
@@ -196,7 +212,6 @@ public class menu_screen extends AppCompatActivity {
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
             int minute = calendar.get(Calendar.MINUTE);
             int second = calendar.get(Calendar.SECOND);
-
             DocumentReference documentReference = fStore.collection("Users").document(userID);
             documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
                 @Override
